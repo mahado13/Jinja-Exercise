@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Form</title>
+</head>
+<body>
+    <h1>MadLibs</h1>
+    <!-- Our stories form which will head to /stories on submission -->
+    <form action="/stories">
+        <!-- We shall loop over our provided prompts and create input prompts from our list -->
+        {% for word in labels %}
+        <div>
+        <label for={{word}}> {{word}}:</label>
+        <input type="text" name={{word}} id={{word}}>
+        </div>
+        {% endfor %}
+      
+        <button>Submit!</button>
+    </form>
+</body>
+</html>
+
+
+<!-- 
+Author: Mahad Osman
+Date: Nov 15, 2022
+Exercise: Jinja Exercise 
+-->
